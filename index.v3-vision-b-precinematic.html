@@ -20,7 +20,7 @@
       --ivory-cream:  #F5F2EC;
       --ink:          #0A0A0A;
       --ash:          #6B6B6B;
-      --copper:       #1E40AF;
+      --copper:       #B8714D;
       --azure:        #1E40AF;
       --fir:          #2D5F3F;
       --border:       rgba(10,10,10,0.08);
@@ -53,7 +53,7 @@
     #tint {
       position: fixed; inset: 0;
       pointer-events: none;
-      background-color: rgba(30,64,175,0);
+      background-color: rgba(184,113,77,0);
       transition: background-color 800ms ease;
       z-index: 0;
     }
@@ -117,7 +117,7 @@
        ════════════════════════════════════════════════════ */
     #experience-track {
       position: relative;
-      height: 1200vh;
+      height: 700vh;
       z-index: 1;
     }
     #experience-stage {
@@ -132,7 +132,7 @@
     #particle-a {
       position: absolute; inset: 0;
       width: 100%; height: 100%;
-      filter: drop-shadow(0 0 12px rgba(30,64,175,0.18)) drop-shadow(0 2px 8px rgba(10,10,10,0.05));
+      filter: drop-shadow(0 2px 8px rgba(10,10,10,0.06));
       z-index: 1;
     }
 
@@ -255,12 +255,12 @@
       letter-spacing: -0.04em;
       color: var(--copper);
       /* dotted particle texture — evokes the A's matter */
-      background-image: radial-gradient(circle at center, rgba(30,64,175,0.85) 1.2px, transparent 1.6px);
+      background-image: radial-gradient(circle at center, rgba(184,113,77,0.85) 1.2px, transparent 1.6px);
       background-size: 6px 6px;
       -webkit-background-clip: text;
               background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 0 2px 8px rgba(30,64,175,0.06);
+      text-shadow: 0 2px 8px rgba(184,113,77,0.06);
     }
     .territory__name {
       font-family: var(--font-display);
@@ -376,15 +376,6 @@
       pointer-events: none;
     }
     .case.is-live { pointer-events: auto; }
-    .case--reverse {
-      grid-template-columns: 1fr 45%;
-    }
-    .case--reverse .case__media { grid-column: 2; grid-row: 1; }
-    .case--reverse .case__body  { grid-column: 1; grid-row: 1; text-align: right; align-items: flex-end; }
-    .case--reverse .case__num   { right: auto; left: 24px; }
-    .case--reverse .case__rule  { margin-left: auto; }
-    .case--reverse .case__quote { margin-left: auto; }
-    .case--reverse .case__cta   { align-self: flex-end; }
     .case__media {
       position: relative;
       background: var(--ivory-cream);
@@ -400,11 +391,11 @@
     }
     .case__media::after {
       content: ""; position: absolute; inset: 0;
-      background: rgba(30,64,175,0);
+      background: rgba(184,113,77,0);
       transition: background 320ms ease;
     }
     .case__media:hover img { transform: scale(1.03); }
-    .case__media:hover::after { background: rgba(30,64,175,0.08); }
+    .case__media:hover::after { background: rgba(184,113,77,0.08); }
     .case__media-arrow {
       position: absolute; top: 16px; right: 16px;
       width: 36px; height: 36px;
@@ -434,7 +425,7 @@
       font-weight: 400;
       font-size: 88px;
       line-height: 1;
-      color: rgba(30,64,175,0.15);
+      color: rgba(184,113,77,0.15);
       pointer-events: none;
     }
     .case__title {
@@ -616,7 +607,7 @@
     }
     .formule--featured {
       border-color: var(--copper);
-      box-shadow: 0 4px 24px rgba(30,64,175,0.08);
+      box-shadow: 0 4px 24px rgba(184,113,77,0.08);
     }
     .formule__badge {
       position: absolute; top: -1px; right: 24px;
@@ -1027,7 +1018,7 @@
           </article>
 
           <!-- PROJET 02 — DIGITALSCHO -->
-          <article class="case case--2 case--reverse" data-case="2">
+          <article class="case case--2" data-case="2">
             <a class="case__media" href="https://digitalscho.be" target="_blank" rel="noopener" aria-label="Voir DigitalScho">
               <img loading="lazy" alt="Aperçu DigitalScho" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fdigitalscho.be?w=1280&h=960" />
               <span class="case__media-arrow" aria-hidden="true">↗</span>
@@ -1177,7 +1168,7 @@
 
         <div class="contact-grid">
           <div class="coords">
-            <div><div class="coord__l">Email</div><a class="coord__v" href="mailto:contact.serenitybelgium@gmail.com">contact.serenitybelgium@gmail.com</a></div>
+            <div><div class="coord__l">Email</div><a class="coord__v" href="mailto:contact@latelier-serenity.be">contact@latelier-serenity.be</a></div>
             <div><div class="coord__l">Téléphone</div><a class="coord__v" href="tel:+32470118222">+32 470 11 82 22</a></div>
             <div><div class="coord__l">Localisation</div><div class="coord__v coord__v--neutral">Bruxelles, Belgique</div></div>
             <div><div class="coord__l">Disponibilité</div><div class="coord__v coord__v--neutral" style="font-size:16px;">Du lundi au vendredi · réponse sous 24h</div></div>
@@ -1219,7 +1210,6 @@
   {
     "imports": {
       "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
       "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/index.js",
       "gsap/ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/ScrollTrigger.js"
     }
@@ -1230,17 +1220,6 @@
     import * as THREE from "three";
     import gsap from "gsap";
     import ScrollTrigger from "gsap/ScrollTrigger";
-
-    // ── Optional post-processing addons (graceful fallback if CDN misses) ──
-    let EffectComposer = null, RenderPass = null, UnrealBloomPass = null, OutputPass = null;
-    try {
-      ({ EffectComposer }   = await import("three/addons/postprocessing/EffectComposer.js"));
-      ({ RenderPass }       = await import("three/addons/postprocessing/RenderPass.js"));
-      ({ UnrealBloomPass }  = await import("three/addons/postprocessing/UnrealBloomPass.js"));
-      ({ OutputPass }       = await import("three/addons/postprocessing/OutputPass.js"));
-    } catch (e) {
-      console.warn("Post-processing addons unavailable — falling back to direct render", e);
-    }
 
     // Lenis is optional — load it dynamically so a CDN miss doesn't tank the page
     let Lenis = null;
@@ -1268,7 +1247,7 @@
     let lenis = null;
     if (!isMobile && !reduceMotion && Lenis) {
       lenis = new Lenis({
-        duration: 1.5,
+        duration: 1.2,
         easing: (t) => 1 - Math.pow(1 - t, 3.4),
         smoothWheel: true,
       });
@@ -1315,414 +1294,282 @@
     }
 
     /* ════════════════════════════════════════════════
-       WIREFRAME A — vector A drawn with LineSegments + joint nodes
-       Replaces the old particle cloud with a clean structural A.
+       PARTICLE A SYSTEM (main canvas)
        ════════════════════════════════════════════════ */
-    class WireframeA {
+    class ParticleA {
       constructor(canvas, opts={}) {
-        this.canvas      = canvas;
-        this.scale       = opts.scale ?? 1.0;
-        this.cx = 0; this.cy = 0;
-        this.rotationY   = 0;
-        this.targetMouseX= 0; this.mouseX = 0;
-        this.aOpacity    = 1;
-        this.defragLevel = 0;
-        this.boost       = 1;
-        this.lineColor   = opts.color ?? 0x1E40AF;
-        this.jointColor  = opts.jointColor ?? 0x1E3A8A;
-        this.size        = opts.size ?? 1.4;
-        this.jointR      = opts.jointR ?? 0.08;
-        this.lineR       = opts.lineR ?? 0.038;
-        this.showJoints  = opts.showJoints ?? true;
-        this.useMouse    = opts.useMouse ?? true;
-        // Cinematic stack — defaults ON for main canvas, OFF for nav
-        this.enablePost      = opts.enablePost ?? true;
-        this.enableLights    = opts.enableLights ?? true;
-        this.enableAmbient   = opts.enableAmbient ?? true;
-        this.enableFog       = opts.enableFog ?? true;
-        this.enableCamMotion = opts.enableCamMotion ?? true;
-        this.ambientCount    = opts.ambientCount ?? (lowPower ? 40 : 80);
-        this.bloomStrength   = opts.bloomStrength ?? (lowPower ? 0.32 : 0.6);
-        this.tracePlayed     = false;
-        this._traceProgress  = 0;
+        this.canvas = canvas;
+        this.count  = opts.count ?? 500;
+        this.size   = opts.size ?? 3.4;
+        this.scale  = opts.scale ?? 1.0;       // 1 = ~70vh
+        this.depth  = opts.depth ?? 50;
+        this.linkDist = opts.linkDist ?? 0.18;
+        this.showLinks = opts.showLinks ?? true;
+        this.cx = 0; this.cy = 0;              // normalized -1..1 offset in viewport
+        this.rotationY = 0;
+        this.pulse = 1;
+        this.aOpacity = 1;
         this.init();
       }
 
       init() {
         const dpr = Math.min(window.devicePixelRatio || 1, 1.6) * (lowPower ? 0.75 : 1);
         this.renderer = new THREE.WebGLRenderer({
-          canvas: this.canvas, antialias: true, alpha: true, preserveDrawingBuffer: true
+          canvas: this.canvas, antialias: true, alpha: true,
         });
         this.renderer.setPixelRatio(dpr);
-        this.renderer.toneMapping = THREE.NoToneMapping;
-        this.renderer.outputColorSpace = THREE.SRGBColorSpace;
-        this.renderer.setClearColor(0x000000, 0);
+        this.scene = new THREE.Scene();
+        this.camera = new THREE.PerspectiveCamera(40, 1, 0.1, 200);
+        this.camera.position.z = 6;
 
-        this.scene  = new THREE.Scene();
-        // Fog — invisible on ivory background, adds depth on the ambient particles
-        if (this.enableFog) {
-          this.scene.fog = new THREE.FogExp2(0xFAFAFA, 0.015);
-        }
-        this.camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
-        this.camera.position.set(0, 0, 6);
-        this._camBase = this.camera.position.clone();
+        // Glyph sample
+        const samples = sampleGlyph("A", this.count);
+        const positions = new Float32Array(this.count * 3);
+        const home      = new Float32Array(this.count * 3);
+        const phases    = new Float32Array(this.count);
 
-        // ── Lights ──
-        if (this.enableLights) {
-          this.ambientLight = new THREE.AmbientLight(0x1E40AF, 0.15);
-          this.scene.add(this.ambientLight);
-
-          this.mainLight = new THREE.PointLight(0x1E40AF, 1.2, 80);
-          this.mainLight.position.set(0, 1, 4);
-          this.scene.add(this.mainLight);
-
-          if (!lowPower) {
-            this.orbitLight = new THREE.PointLight(0xFFFFFF, 0.5, 60);
-            this.orbitLight.position.set(4, 2, 3);
-            this.scene.add(this.orbitLight);
-          }
+        for (let i = 0; i < this.count; i++) {
+          const [nx, ny] = samples[i % samples.length];
+          // letter scale
+          const hx = nx * 1.4;
+          const hy = ny * 1.4;
+          const hz = (Math.random() - 0.5) * (this.depth / 50);
+          home[i*3+0] = hx;
+          home[i*3+1] = hy;
+          home[i*3+2] = hz;
+          // start scattered (for intro)
+          positions[i*3+0] = (Math.random()-0.5) * 8;
+          positions[i*3+1] = (Math.random()-0.5) * 5;
+          positions[i*3+2] = (Math.random()-0.5) * 6;
+          phases[i] = Math.random() * Math.PI * 2;
         }
 
-        // ── A skeleton ──
-        const s = this.size;
-        const V = (x, y, z) => new THREE.Vector3(x, y, z);
-        const apex = V( 0.00,  1.25 * s,  0.00);
-        const bl   = V(-0.95 * s, -1.15 * s, -0.10);
-        const br   = V( 0.95 * s, -1.15 * s,  0.10);
-        const lmid = V(-0.42 * s, -0.15 * s,  0.04);
-        const rmid = V( 0.42 * s, -0.15 * s, -0.04);
-        const blL  = V(-1.08 * s, -1.15 * s, -0.10);
-        const blR  = V(-0.78 * s, -1.15 * s, -0.10);
-        const brL  = V( 0.78 * s, -1.15 * s,  0.10);
-        const brR  = V( 1.08 * s, -1.15 * s,  0.10);
-        const apL  = V(-0.09,  1.25 * s,  0.00);
-        const apR  = V( 0.09,  1.25 * s,  0.00);
+        this.home = home;
+        this.positions = positions;
+        this.phases = phases;
 
-        const segData = [
-          { from: bl,    to: apex, ta: 0.00, tb: 0.40 },
-          { from: apex,  to: br,   ta: 0.20, tb: 0.60 },
-          { from: lmid,  to: rmid, ta: 0.46, tb: 0.74 },
-          { from: blL,   to: blR,  ta: 0.78, tb: 0.92 },
-          { from: brL,   to: brR,  ta: 0.80, tb: 0.94 },
-          { from: apL,   to: apR,  ta: 0.92, tb: 1.00 },
-        ];
+        const geom = new THREE.BufferGeometry();
+        geom.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+        this.geometry = geom;
 
-        // Emissive standard material — bloom catches this hard
-        this.cylGeom = new THREE.CylinderGeometry(this.lineR, this.lineR, 1, 14, 1);
-        this.lineMat = new THREE.MeshStandardMaterial({
-          color: this.lineColor,
-          emissive: this.lineColor,
-          emissiveIntensity: 0.8,
-          roughness: 0.5,
-          metalness: 0.0,
-          transparent: true,
-          opacity: 1,
-          fog: false, // lines stay crisp regardless of distance
-        });
-
-        this.group = new THREE.Group();
-        this.scene.add(this.group);
-
-        const UP = new THREE.Vector3(0, 1, 0);
-        this.segments = segData.map(d => {
-          const dir    = new THREE.Vector3().subVectors(d.to, d.from);
-          const length = dir.length();
-          const ndir   = dir.clone().normalize();
-          const quat   = new THREE.Quaternion().setFromUnitVectors(UP, ndir);
-          const mesh   = new THREE.Mesh(this.cylGeom, this.lineMat);
-          mesh.quaternion.copy(quat);
-          mesh.scale.y = 0.0001;
-          this.group.add(mesh);
-          return { mesh, from: d.from, to: d.to, ndir, length, ta: d.ta, tb: d.tb };
-        });
-
-        // Joints — emissive spheres
-        this.joints = [];
-        if (this.showJoints) {
-          const sphereGeom = new THREE.SphereGeometry(this.jointR, 18, 18);
-          const positions  = [apex, lmid, rmid];
-          for (const p of positions) {
-            const mat  = new THREE.MeshStandardMaterial({
-              color: this.lineColor,
-              emissive: this.lineColor,
-              emissiveIntensity: 1.2,
-              roughness: 0.4,
-              metalness: 0.0,
-              transparent: true,
-              opacity: 0,
-              fog: false,
-            });
-            const mesh = new THREE.Mesh(sphereGeom, mat);
-            mesh.position.copy(p);
-            mesh.userData.basePos = p.clone();
-            this.group.add(mesh);
-            this.joints.push(mesh);
-          }
-        }
-
-        // ── Ambient particles (atmospheric stardust) ──
-        if (this.enableAmbient) {
-          const N = this.ambientCount;
-          const positions = new Float32Array(N * 3);
-          const seeds     = new Float32Array(N * 3); // base positions
-          const phases    = new Float32Array(N * 3); // per-axis phase offsets
-          for (let i = 0; i < N; i++) {
-            const ix = i * 3;
-            // Distribute in a flattened cube around the A
-            seeds[ix    ] = (Math.random() - 0.5) * 12;   // x: ±6
-            seeds[ix + 1] = (Math.random() - 0.5) * 10;   // y: ±5
-            seeds[ix + 2] = (Math.random() - 0.5) * 8 - 1;// z: ±4, slightly behind
-            positions[ix    ] = seeds[ix    ];
-            positions[ix + 1] = seeds[ix + 1];
-            positions[ix + 2] = seeds[ix + 2];
-            phases[ix    ] = Math.random() * Math.PI * 2;
-            phases[ix + 1] = Math.random() * Math.PI * 2;
-            phases[ix + 2] = Math.random() * Math.PI * 2;
-          }
-          const ambGeom = new THREE.BufferGeometry();
-          ambGeom.setAttribute("position", new THREE.BufferAttribute(positions, 3));
-          this.ambientPositions = positions;
-          this.ambientSeeds     = seeds;
-          this.ambientPhases    = phases;
-          this.ambientGeom      = ambGeom;
-          this.ambientMat = new THREE.PointsMaterial({
-            color: this.lineColor,
-            size: 0.05,
-            sizeAttenuation: true,
-            transparent: true,
-            opacity: 0.4,
-            depthWrite: false,
-            fog: true,
-          });
-          this.ambientPoints = new THREE.Points(ambGeom, this.ambientMat);
-          this.scene.add(this.ambientPoints);
-        }
-
-        // ── Effect composer (post-processing) ──
-        this.useComposer = false;
-        if (this.enablePost && EffectComposer && RenderPass && UnrealBloomPass) {
-          try {
-            this.composer = new EffectComposer(this.renderer);
-            this.composer.addPass(new RenderPass(this.scene, this.camera));
-            this.bloomPass = new UnrealBloomPass(
-              new THREE.Vector2(this.canvas.clientWidth || 1, this.canvas.clientHeight || 1),
-              this.bloomStrength, // strength
-              0.4,                 // radius
-              0.15                 // threshold
-            );
-            this.composer.addPass(this.bloomPass);
-            if (OutputPass) {
-              this.composer.addPass(new OutputPass());
+        const mat = new THREE.ShaderMaterial({
+          uniforms: {
+            uColor: { value: new THREE.Color(0xB8714D) },
+            uSize:  { value: this.size },
+            uOpacity: { value: 1.0 },
+            uDpr:  { value: dpr },
+          },
+          vertexShader: `
+            uniform float uSize;
+            uniform float uDpr;
+            void main() {
+              vec4 mv = modelViewMatrix * vec4(position, 1.0);
+              gl_PointSize = uSize * uDpr * (300.0 / -mv.z);
+              gl_Position  = projectionMatrix * mv;
             }
-            this.useComposer = true;
-          } catch (e) {
-            console.warn("Composer build failed, using direct render", e);
-            this.useComposer = false;
+          `,
+          fragmentShader: `
+            uniform vec3 uColor;
+            uniform float uOpacity;
+            void main() {
+              vec2 c = gl_PointCoord - 0.5;
+              float d = length(c);
+              float a = smoothstep(0.5, 0.42, d);
+              gl_FragColor = vec4(uColor, a * uOpacity);
+            }
+          `,
+          transparent: true,
+          depthWrite: false,
+        });
+        this.material = mat;
+        this.points = new THREE.Points(geom, mat);
+        this.scene.add(this.points);
+
+        // Lines between near particles (computed in CPU each frame is expensive — pre-link by home positions, draw with current positions)
+        if (this.showLinks) {
+          this.linkPairs = [];
+          for (let i = 0; i < this.count; i++) {
+            for (let j = i+1; j < this.count; j++) {
+              const dx = home[i*3]-home[j*3], dy = home[i*3+1]-home[j*3+1];
+              const d2 = dx*dx + dy*dy;
+              if (d2 < this.linkDist * this.linkDist) {
+                this.linkPairs.push(i, j);
+                if (this.linkPairs.length / 2 > 600) break; // cap
+              }
+            }
+            if (this.linkPairs.length / 2 > 600) break;
           }
+          const lpos = new Float32Array(this.linkPairs.length * 3);
+          const lgeom = new THREE.BufferGeometry();
+          lgeom.setAttribute("position", new THREE.BufferAttribute(lpos, 3));
+          this.linkGeometry = lgeom;
+          this.linkPositions = lpos;
+          const lmat = new THREE.LineBasicMaterial({
+            color: 0xB8714D, transparent: true, opacity: 0.22,
+          });
+          this.lines = new THREE.LineSegments(lgeom, lmat);
+          this.linesMat = lmat;
+          this.scene.add(this.lines);
         }
 
         this.resize();
-        this._onResize = () => this.resize();
-        window.addEventListener("resize", this._onResize);
-        if (this.useMouse) {
-          this._onMove = (e) => {
-            this.targetMouseX = (e.clientX / window.innerWidth - 0.5) * 2;
-          };
-          window.addEventListener("mousemove", this._onMove, { passive: true });
-        }
+        window.addEventListener("resize", () => this.resize());
         this.start();
       }
 
       resize() {
-        const w = this.canvas.clientWidth || this.canvas.width;
-        const h = this.canvas.clientHeight || this.canvas.height;
-        if (!w || !h) return;
+        const w = this.canvas.clientWidth;
+        const h = this.canvas.clientHeight;
         this.renderer.setSize(w, h, false);
         this.camera.aspect = w / h;
         this.camera.updateProjectionMatrix();
-        if (this.composer) {
-          this.composer.setSize(w, h);
-        }
-        if (this.bloomPass) {
-          this.bloomPass.setSize(w, h);
-        }
       }
 
       start() {
-        this.t0   = performance.now();
+        this.t0 = performance.now();
         this.last = this.t0;
-
-        if (!this.tracePlayed) {
-          this.tracePlayed = true;
-          this.joints.forEach(j => { j.userData.fadeIn = 0; });
-          if (reduceMotion) {
-            this._traceProgress = 1;
-            this.joints.forEach(j => { j.userData.fadeIn = 1; });
-          } else {
-            gsap.fromTo(this, { _traceProgress: 0 }, {
-              _traceProgress: 1, duration: 1.5, ease: "power3.out",
-            });
-            this.joints.forEach((j, i) => {
-              gsap.to(j.userData, {
-                fadeIn: 1, duration: 0.5, delay: 1.2 + i * 0.1, ease: "power2.out",
-              });
-            });
-          }
-        } else {
-          this._traceProgress = 1;
-          this.joints.forEach(j => { j.userData.fadeIn = 1; });
-        }
-
         const tick = (now) => {
           this._raf = requestAnimationFrame(tick);
           if (document.hidden) return;
           const dt = (now - this.last) / 1000;
           this.last = now;
           this.update(dt, (now - this.t0)/1000);
-          if (this.useComposer) {
-            this.composer.render();
-          } else {
-            this.renderer.render(this.scene, this.camera);
-          }
+          this.renderer.render(this.scene, this.camera);
         };
         this._raf = requestAnimationFrame(tick);
       }
 
       update(dt, t) {
-        // ── Rotation Y + mouse parallax ──
-        this.rotationY += dt * (Math.PI * 2 / 40);
-        this.mouseX += (this.targetMouseX - this.mouseX) * 0.04;
-        const yaw = this.rotationY + this.mouseX * (Math.PI / 18);
+        const pos = this.positions;
+        const home = this.home;
+        const phases = this.phases;
+        const breath = 0.04;
+        const ph = this.pulse;
 
-        // ── Group transform ──
-        const sg = this.scale * this.boost;
-        this.group.scale.setScalar(sg);
-        this.group.rotation.y = yaw;
-        this.group.position.set(this.cx * 3.2, this.cy * 1.8, 0);
+        // group rotation around Y (30s cycle)
+        this.rotationY += dt * (Math.PI * 2 / 30);
+        const cosY = Math.cos(this.rotationY);
+        const sinY = Math.sin(this.rotationY);
 
-        // ── Camera micro-movement (cinematic breath) ──
-        if (this.enableCamMotion && !reduceMotion) {
-          this.camera.position.x = this._camBase.x + Math.sin(t * (2*Math.PI/8 )) * 0.5;
-          this.camera.position.y = this._camBase.y + Math.sin(t * (2*Math.PI/11)) * 0.3;
-          this.camera.lookAt(0, 0, 0);
+        // global scale + offset (driven by timeline)
+        const s = this.scale;
+        const ox = this.cx * 3.2;
+        const oy = this.cy * 1.8;
+
+        for (let i = 0; i < this.count; i++) {
+          const ix = i*3;
+          const hx = home[ix], hy = home[ix+1], hz = home[ix+2];
+          // breath
+          const br = breath * Math.sin(t * 0.9 + phases[i]);
+          let x = hx + br;
+          let y = hy + br * 0.6;
+          let z = hz + br * 1.2;
+          // rotate around Y
+          const rx = x * cosY + z * sinY;
+          const rz = -x * sinY + z * cosY;
+          // scale + offset
+          pos[ix]   = rx * s + ox;
+          pos[ix+1] = y  * s + oy;
+          pos[ix+2] = rz * s;
         }
+        this.geometry.attributes.position.needsUpdate = true;
 
-        // ── Segments — trace + idle osc + defrag ──
-        const tp  = this._traceProgress;
-        const df  = this.defragLevel;
-        const _p  = new THREE.Vector3();
-        for (let i = 0; i < this.segments.length; i++) {
-          const seg = this.segments[i];
-          const segP = Math.max(0.0001, Math.min(1, (tp - seg.ta) / (seg.tb - seg.ta)));
-          const len  = seg.length * segP;
-          seg.mesh.scale.y = len;
-          _p.copy(seg.from).addScaledVector(seg.ndir, len * 0.5);
-          if (tp >= 0.98) {
-            _p.x += 0.012 * Math.sin(t * 1.3 + i * 1.7);
-            _p.y += 0.010 * Math.cos(t * 1.1 + i * 2.3);
+        // links
+        if (this.lines) {
+          const lp = this.linkPositions;
+          const pairs = this.linkPairs;
+          for (let k = 0; k < pairs.length; k += 2) {
+            const a = pairs[k]*3, b = pairs[k+1]*3;
+            const o = (k/2) * 6;
+            lp[o  ] = pos[a  ];
+            lp[o+1] = pos[a+1];
+            lp[o+2] = pos[a+2];
+            lp[o+3] = pos[b  ];
+            lp[o+4] = pos[b+1];
+            lp[o+5] = pos[b+2];
           }
-          if (df > 0) {
-            _p.x += df * Math.sin(i * 12.9 + t * 4.0) * 0.35;
-            _p.y += df * Math.cos(i *  8.7 + t * 3.3) * 0.35;
-          }
-          seg.mesh.position.copy(_p);
+          this.linkGeometry.attributes.position.needsUpdate = true;
+          // pulse on links
+          this.linesMat.opacity = 0.22 * (0.92 + 0.10 * Math.sin(t * (2*Math.PI/6))) * this.aOpacity;
         }
-
-        // ── Joints ──
-        for (const j of this.joints) {
-          const base = j.userData.basePos;
-          _p.copy(base);
-          if (df > 0) {
-            _p.x += df * Math.sin(t * 5 + base.x * 7) * 0.25;
-            _p.y += df * Math.cos(t * 4 + base.y * 7) * 0.25;
-          }
-          j.position.copy(_p);
-        }
-
-        // ── Opacity pulse (6s cycle, ±10%) ──
-        const pulse = 0.90 + 0.10 * Math.sin(t * (2 * Math.PI / 6));
-        this.lineMat.opacity = this.aOpacity * pulse;
-        for (const j of this.joints) {
-          j.material.opacity = (j.userData.fadeIn ?? 0) * this.aOpacity * pulse;
-        }
-
-        // ── Main point light — pulse intensity 4s ──
-        if (this.mainLight) {
-          this.mainLight.intensity = 0.8 + 0.7 * (0.5 + 0.5 * Math.sin(t * (2*Math.PI/4)));
-          // Light follows the A group (approximately)
-          this.mainLight.position.set(
-            this.group.position.x,
-            this.group.position.y + 1,
-            this.group.position.z + 4
-          );
-        }
-
-        // ── Orbit light — slow 12s revolution around the A ──
-        if (this.orbitLight) {
-          const a = t * (2*Math.PI/12);
-          this.orbitLight.position.set(
-            this.group.position.x + Math.cos(a) * 5,
-            this.group.position.y + Math.sin(a * 0.6) * 1.5,
-            this.group.position.z + Math.sin(a) * 5
-          );
-        }
-
-        // ── Ambient particles drift (Brownian-ish per-axis sin) ──
-        if (this.ambientPoints) {
-          const pos = this.ambientPositions;
-          const seeds = this.ambientSeeds;
-          const ph = this.ambientPhases;
-          const N = pos.length / 3;
-          for (let i = 0; i < N; i++) {
-            const ix = i * 3;
-            // Per-axis cycle between 6-12s (varies by phase modulo)
-            const cx = 6 + (i % 7);
-            const cy = 7 + (i % 5);
-            const cz = 9 + (i % 4);
-            pos[ix    ] = seeds[ix    ] + Math.sin(t * (2*Math.PI/cx) + ph[ix    ]) * 0.4;
-            pos[ix + 1] = seeds[ix + 1] + Math.sin(t * (2*Math.PI/cy) + ph[ix + 1]) * 0.4;
-            pos[ix + 2] = seeds[ix + 2] + Math.sin(t * (2*Math.PI/cz) + ph[ix + 2]) * 0.3;
-          }
-          this.ambientGeom.attributes.position.needsUpdate = true;
-          this.ambientMat.opacity = 0.4 * this.aOpacity;
-        }
+        // pulse on material opacity
+        this.material.uniforms.uOpacity.value = (0.95 + 0.10 * Math.sin(t * (2*Math.PI/6))) * this.aOpacity;
       }
 
-      pulseMorph(intensity = 1) {
-        if (reduceMotion) return;
-        gsap.fromTo(this, { defragLevel: 0 }, {
-          defragLevel: intensity, duration: 0.4, ease: "power2.out",
-          onComplete: () => {
-            gsap.to(this, { defragLevel: 0, duration: 0.4, ease: "power2.in" });
+      /* INTRO: fly particles from scattered to home position */
+      playIntro(duration = 1.5) {
+        const home = this.home;
+        const pos  = this.positions;
+        const start = new Float32Array(pos);
+        const startT = performance.now();
+        const tick = () => {
+          const t = Math.min(1, (performance.now() - startT) / (duration * 1000));
+          // ease out cubic
+          const e = 1 - Math.pow(1 - t, 3);
+          for (let i = 0; i < this.count; i++) {
+            const ix = i*3;
+            // Stagger by index
+            const offset = (i / this.count) * 0.4;
+            const k = Math.min(1, Math.max(0, (e - offset) / (1 - offset)));
+            const ke = k;
+            // Update the home (since update() rebuilds from home each frame, we instead
+            // overwrite home temporarily — but simpler: tween a multiplier on home).
+            // Easiest approach: lerp positions, but update() overwrites pos.
+            // Trick: scale-in from 0 by lerping cx? No, we need per-particle.
+            // Solution: stash a separate "spawnLerp" and let update() interpolate.
+            this._spawn = this._spawn || new Float32Array(this.count);
+            this._spawnHome = this._spawnHome || start; // start positions
+            this._spawn[i] = ke;
           }
-        });
+          if (t < 1) requestAnimationFrame(tick);
+        };
+        // Set spawn arrays
+        this._spawnHome = start;
+        this._spawn = new Float32Array(this.count);
+        // Hook into update by overriding home temporarily
+        // We'll patch update via lerp factor:
+        const originalUpdate = this.update.bind(this);
+        this.update = (dt, time) => {
+          // Compute "current home" = lerp(start scattered, real home, _spawn[i])
+          // Easiest: temporarily mutate home, then restore.
+          // But that breaks the math. Instead: compute as-if then lerp positions.
+          originalUpdate(dt, time);
+          const pos = this.positions;
+          const sp = this._spawn;
+          const sh = this._spawnHome;
+          for (let i = 0; i < this.count; i++) {
+            const ix = i*3;
+            const k = sp[i];
+            if (k < 1) {
+              pos[ix  ] = sh[ix  ] * (1 - k) + pos[ix  ] * k;
+              pos[ix+1] = sh[ix+1] * (1 - k) + pos[ix+1] * k;
+              pos[ix+2] = sh[ix+2] * (1 - k) + pos[ix+2] * k;
+            }
+          }
+          this.geometry.attributes.position.needsUpdate = true;
+        };
+        // Restore after intro
+        setTimeout(() => { this.update = originalUpdate; }, duration * 1000 + 200);
+        tick();
       }
     }
 
     /* ════════════════════════════════════════════════
        Initialize main A + nav A
        ════════════════════════════════════════════════ */
-    const mainA = new WireframeA(document.getElementById("particle-a"), {
-      size: 1.4,
-      showJoints: true,
-      useMouse: true,
-      enablePost:      !isMobile,
-      enableLights:    true,
-      enableAmbient:   !isMobile,
-      enableFog:       !isMobile,
-      enableCamMotion: !isMobile,
+    const mainA = new ParticleA(document.getElementById("particle-a"), {
+      count: lowPower ? 320 : 500,
+      size: 3.6,
+      scale: 1.0,
+      showLinks: !lowPower,
     });
+    if (!reduceMotion) mainA.playIntro(1.5);
 
-    const navA = new WireframeA(document.getElementById("nav-a"), {
-      size: 1.55,
-      showJoints: true,
-      jointR: 0.06,
-      useMouse: false,
-      enablePost: false,
-      enableLights: false,
-      enableAmbient: false,
-      enableFog: false,
-      enableCamMotion: false,
+    const navA = new ParticleA(document.getElementById("nav-a"), {
+      count: 120,
+      size: 2.4,
+      scale: 1.05,
+      showLinks: false,
     });
 
     /* ════════════════════════════════════════════════
@@ -1786,7 +1633,7 @@
           trigger: "#experience-track",
           start:   "top top",
           end:     "bottom bottom",
-          scrub:   1.5,
+          scrub:   1,
           // pin handled by sticky CSS
         }
       });
@@ -1799,7 +1646,7 @@
         opacity: 0, duration: 3, ease: "power2.in",
       }, T(0.12))
         // tint to copper
-        .to(tint, { backgroundColor: "rgba(30,64,175,0.04)", duration: 3 }, T(0.12))
+        .to(tint, { backgroundColor: "rgba(184,113,77,0.04)", duration: 3 }, T(0.12))
         // particle A — slight scale down & opacity reduce
         .to(mainA, { aOpacity: 0.65, scale: 0.9, duration: 5, ease: "power2.inOut" }, T(0.12))
         // SCENE 2 in
@@ -1813,7 +1660,7 @@
 
       // SCENE 2 → SCENE 3 — return A to center, marquee deploys
       tl.to(scenes[1], { opacity: 0, duration: 2.5, ease: "power2.in" }, T(0.30))
-        .to(tint, { backgroundColor: "rgba(30,64,175,0)", duration: 2 }, T(0.30))
+        .to(tint, { backgroundColor: "rgba(184,113,77,0)", duration: 2 }, T(0.30))
         .to(mainA, { aOpacity: 1, scale: 1.0, duration: 3, ease: "power2.inOut" }, T(0.30))
         .to(scenes[2], { opacity: 1, duration: 2.5, ease: "power2.out" }, T(0.32))
         // marquee sits centered, A becomes background
@@ -1850,22 +1697,22 @@
 
       // SCENE 5 → SCENE 6 (Formules)
       tl.to(scenes[4], { opacity: 0, duration: 2, ease: "power2.in" }, T(0.75))
-        .to(tint, { backgroundColor: "rgba(30,64,175,0.06)", duration: 3 }, T(0.75))
+        .to(tint, { backgroundColor: "rgba(184,113,77,0.06)", duration: 3 }, T(0.75))
         .to(mainA, { scale: 0.3, cx: 0.7, cy: -0.45, aOpacity: 0.55, duration: 4 }, T(0.75))
         .to(scenes[5], { opacity: 1, duration: 2.5, ease: "power2.out" }, T(0.77));
 
       // SCENE 6 → SCENE CONTACT (87-100%)
       tl.to(scenes[5], { opacity: 0, duration: 2, ease: "power2.in" }, T(0.87))
-        .to(tint, { backgroundColor: "rgba(30,64,175,0)", duration: 3 }, T(0.87))
+        .to(tint, { backgroundColor: "rgba(184,113,77,0)", duration: 3 }, T(0.87))
         .to(mainA, { scale: 1.0, cx: 0, cy: 0, aOpacity: 1, duration: 4, ease: "power2.inOut" }, T(0.87))
         .to(scenes[6], { opacity: 1, duration: 2.5, ease: "power2.out" }, T(0.90));
 
-      // Final pulse — bump A scale briefly
-      tl.to(mainA, {
-        boost: 1.18, duration: 2, ease: "power2.out",
+      // Final pulse — bump particle size briefly
+      tl.to(mainA.material.uniforms.uSize, {
+        value: 5.0, duration: 2, ease: "power2.out",
       }, T(0.97))
-        .to(mainA, {
-          boost: 1.0, duration: 2, ease: "power2.inOut",
+        .to(mainA.material.uniforms.uSize, {
+          value: 3.6, duration: 2, ease: "power2.inOut",
         }, T(0.99));
 
       // set pointer-events live per active scene
@@ -1888,26 +1735,6 @@
             s.style.pointerEvents = live ? "auto" : "none";
           }
         });
-      });
-
-      // Defragment morph at every scene boundary
-      let lastSceneIdx = 0;
-      const sceneBoundaries = [0, 0.13, 0.31, 0.36, 0.61, 0.76, 0.88];
-      ScrollTrigger.create({
-        trigger: "#experience-track",
-        start: "top top",
-        end: "bottom bottom",
-        onUpdate: (st) => {
-          const p = st.progress;
-          let idx = 0;
-          for (let i = 0; i < sceneBoundaries.length; i++) {
-            if (p >= sceneBoundaries[i]) idx = i;
-          }
-          if (idx !== lastSceneIdx) {
-            mainA.pulseMorph(0.85);
-            lastSceneIdx = idx;
-          }
-        }
       });
 
       // Nav + footer visibility
